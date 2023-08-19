@@ -1,90 +1,88 @@
 #include "Student.h"
+#include <iostream>
+#include <windows.h>
+
 Student::Student()
 {
-	id = 0;
-	login = "";
-	password = "";
-	name = "";
-	surname = "";
-	email = "";
-	phoneNumber = "";
+
 }
 
-Student::Student(int id, std::string login, std::string password, std::string name, std::string surname, std::string email, std::string phoneNumber)
+void Student::input_data()
 {
-	this->id = id;
-	this->login = login;
-	this->password = password;
-	this->name = name;
-	this->surname = surname;
-	this->email = email;
-	this->phoneNumber = phoneNumber;
-}
-Student::~Student()
-{
-	this->login.clear();
-	this->password.clear();
-	this->name.clear();
-	this->surname.clear();
-	this->email.clear();
-	this->phoneNumber.clear();
-}
-
-int Student::getId()
-{
-	return id;
-}
-std::string Student::getLogin()
-{
-	return login;
+    std::cout << "Введіть ПІБ студента: ";
+    std::getline(std::cin, full_name);
+    std::cout << "Введіть дату народження: ";
+    std::getline(std::cin, birth_date);
+    std::cout << "Введіть контактний телефон: ";
+    std::getline(std::cin, contact_phone);
+    std::cout << "Введіть місто студента: ";
+    std::getline(std::cin, city);
+    std::cout << "Введіть країну студента: ";
+    std::getline(std::cin, country);
+    std::cout << "Введіть назву навчального закладу: ";
+    std::getline(std::cin, school_name);
+    std::cout << "Введіть місто навчального закладу: ";
+    std::getline(std::cin, school_city);
+    std::cout << "Введіть країну навчального закладу: ";
+    std::getline(std::cin, school_country);
+    std::cout << "Введіть номер групи: ";
+    std::getline(std::cin, group_number);
 }
 
-std::string Student::getPassword()
+void Student::display_data()
 {
-	return password;
-}
-std::string Student::getName()
-{
-	return name;
-}
-std::string Student::getSurname()
-{
-	return surname;
-}
-std::string Student::getEmail()
-{
-	return email;
-}
-std::string Student::getPhoneNumber()
-{
-	return phoneNumber;
-}
-void Student::setId(int Id)
-{
-	this->id = id;
+    std::cout << "ПІБ студента: " << full_name << std::endl;
+    std::cout << "Дата народження: " << birth_date << std::endl;
+    std::cout << "Контактний телефон: " << contact_phone << std::endl;
+    std::cout << "Місто: " << city << std::endl;
+    std::cout << "Країна: " << country << std::endl;
+    std::cout << "Назва навчального закладу: " << school_name << std::endl;
+    std::cout << "Місто навчального закладу: " << school_city << std::endl;
+    std::cout << "Країна навчального закладу: " << school_country << std::endl;
+    std::cout << "Номер групи: " << group_number << std::endl;
 }
 
-void Student::setLogin(std::string login)
+std::string Student::getFullName()
 {
-	this->login = login;
+    return full_name;
 }
-void Student::setPassword(std::string password)
+
+std::string Student::getBirthDate()
 {
-	this->password = password;
+    return birth_date;
 }
-void Student::setName(std::string name)
+
+std::string Student::getContactPhone()
 {
-	this->name = name;
+    return contact_phone;
 }
-void Student::setSurname(std::string surname)
+
+std::string Student::getCity()
 {
-	this->surname = surname;
+    return city;
 }
-void Student::setEmail(std::string email)
+
+std::string Student::getCountry()
 {
-	this->email = email;
+    return country;
 }
-void Student::setPhoneNumbe(std::string phoneNumber)
+
+std::string Student::getSchoolName()
 {
-	this->phoneNumber = phoneNumber;
+    return school_name;
+}
+
+std::string Student::getSchoolCity()
+{
+    return school_city;
+}
+
+std::string Student::getSchoolCountry()
+{
+    return school_country;
+}
+
+std::string Student::getGroupNumber()
+{
+    return group_number;
 }

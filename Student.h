@@ -1,34 +1,31 @@
 #include <iostream>
-
+#include <string>
+#include <windows.h>
 class Student
 {
 private:
-	int id;
-	std::string login;
-	std::string password;
-	std::string name;
-	std::string surname;
-	std::string email;
-	std::string phoneNumber;
+    std::string full_name;
+    std::string birth_date;
+    std::string contact_phone;
+    std::string city;
+    std::string country;
+    std::string school_name;
+    std::string school_city;
+    std::string school_country;
+    std::string group_number;
 
 public:
-	Student();
-	Student(int id, std::string login, std::string password, std::string name, std::string surname, std::string email, std::string phoneNumber);
-	~Student();
+    Student();
+    void input_data();
+    void display_data();
 
-	int getId();
-	std::string getLogin();
-	std::string getPassword();
-	std::string getName();
-	std::string getSurname();
-	std::string getEmail();
-	std::string getPhoneNumber();
-
-	void setId(int Id);
-	void setLogin(std::string login);
-	void setPassword(std::string password);
-	void setName(std::string name);
-	void setSurname(std::string surname);
-	void setEmail(std::string email);
-	void setPhoneNumbe(std::string phoneNumber);
+    std::string getFullName();
+    std::string getBirthDate();
+    std::string getContactPhone();
+    std::string getCity();
+    std::string getCountry();
+    std::string getSchoolName();
+    std::string getSchoolCity();
+    std::string getSchoolCountry();
+    std::string getGroupNumber();
 };
